@@ -3,7 +3,7 @@
 
 <mapper namespace="kr.teamfrankly.franklykeywordapi.BbsAPI.BbsMapper">
 
-    <resultMap type="BoardDTO" id="boardResultMap">
+    <resultMap type="BbsDTO" id="bbsResultMap">
         <id column="id" property="id"/>
         <result column="author" property="author"/>
         <result column="regDate" property="regDate"/>
@@ -12,7 +12,7 @@
         <result column="content" property="content"/>
     </resultMap>
 
-    <insert id="createBoard" parameterType="BoardDTO">
+    <insert id="createBoard" parameterType="BbsDTO">
         INSERT INTO member_info.board(author, regDate, title, content, region)
         VALUES(#{author}
               ,#{regDate}
@@ -22,12 +22,12 @@
               ,#{region})
     </insert>
 
-    <select id="readBoard" resultMap="boardResultMap">
+    <select id="readBoard" resultMap="bbsResultMap">
         SELECT * FROM member_info.board
         WHERE id = #{id} AND region = #{region}
     </select>
 
-    <update id="updateBoard" parameterType="BoardDTO">
+    <update id="updateBoard" parameterType="BbsDTO">
         UPDATE member_info.board
         SET marked = #{marked},
             title = #{title},
@@ -36,7 +36,7 @@
     </update>
 
 
-    <delete id="deleteBoard" parameterType="BoardDTO">
+    <delete id="deleteBoard" parameterType="BbsDTO">
         DELETE FROM member_info.board
         WHERE id = #{id} AND region = #{region}
 

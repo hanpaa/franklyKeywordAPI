@@ -4,7 +4,7 @@
 <configuration>
 
     <typeAliases>
-<!--        <typeAlias type="com.frankly.restapi.domain.BoardDTO" alias="BoardDTO"/>-->
+        <typeAlias type="kr.teamfrankly.franklykeywordapi.BbsAPI.BbsDTO" alias="BbsDTO"/>
 <!--        <typeAlias type="com.frankly.restapi.domain.UserDTO" alias="UserDTO"/>-->
         <typeAlias type="kr.teamfrankly.franklykeywordapi.PoliticianAPI.PoliticianDTO" alias="PoliticianDTO"/>
 <!--        <typeAlias type="com.frankly.restapi.domain.RegionNumberDTO" alias="RegionNumberDTO"/>-->
