@@ -8,6 +8,7 @@
 <!--        <typeAlias type="com.frankly.restapi.domain.UserDTO" alias="UserDTO"/>-->
         <typeAlias type="kr.teamfrankly.franklykeywordapi.PoliticianAPI.PoliticianDTO" alias="PoliticianDTO"/>
 <!--        <typeAlias type="com.frankly.restapi.domain.RegionNumberDTO" alias="RegionNumberDTO"/>-->
+        <typeAlias type="kr.teamfrankly.franklykeywordapi.NewsAPI.NewsDTO" alias="NewsDTO"/>
     </typeAliases>
 
 </configuration>

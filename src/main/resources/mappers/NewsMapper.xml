@@ -1,0 +1,22 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<!DOCTYPE mapper PUBLIC "-//mybatis.org//DTD Mapper 3.0//EN" "http://mybatis.org/dtd/mybatis-3-mapper.dtd">
+
+<mapper namespace="kr.teamfrankly.franklykeywordapi.NewsAPI.NewsMapper">
+
+    <resultMap type="NewsDTO" id="newsResultMap">
+        <id column="input_keyword" property="inputKeyword"/>
+        <result column="result_Keywords" property="resultKeyword"/>
+        <!--        <result column="marked" property="marked"/>-->
+        <result column="NEWS_URL" property="newsURL"/>
+    </resultMap>
+
+
+    <select id="readNews" resultMap="newsResultMap">
+        SELECT * FROM member_info.SRESULT
+        WHERE input_keyword = #{name}
+    </select>
+
+
+
+
+</mapper>

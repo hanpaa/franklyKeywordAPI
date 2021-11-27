@@ -16,7 +16,6 @@
         INSERT INTO member_info.board(author, regDate, title, content, region)
         VALUES(#{author}
               ,#{regDate}
-#               ,#{marked}
               ,#{title}
               ,#{content}
               ,#{region})
@@ -29,8 +28,7 @@
 
     <update id="updateBoard" parameterType="BbsDTO">
         UPDATE member_info.board
-        SET marked = #{marked},
-            title = #{title},
+        SET title = #{title},
             content = #{content}
         WHERE id = #{id} AND region = #{region}
     </update>

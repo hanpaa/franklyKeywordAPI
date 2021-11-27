@@ -26,7 +26,9 @@ public class PoliticianController {
     @GetMapping("/{id}")
     public ResponseEntity<PoliticianDTO> getPoliticianByID(@PathVariable("id") Long id)throws Exception{
 
-        return new ResponseEntity<>(politicianService.getPoliticianByIDService(id), HttpStatus.OK);
+        PoliticianDTO politicianDTO = politicianService.getPoliticianByIDService(id);
+
+        return new ResponseEntity<>(politicianDTO, HttpStatus.OK);
 
     }
 
